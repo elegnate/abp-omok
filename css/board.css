@@ -1,0 +1,167 @@
+#mode {
+    width: 300px;
+    height: 370px;
+    overflow: hidden;
+    transition:0.5s;
+}
+
+#mode.hide {
+    width: 0 !important;
+    height: 0 !important;
+    opacity: 0;
+}
+
+#mode ul {
+    padding: 4.5%;
+    height: 100%;
+    width: 100%;
+}
+    #mode ul li {
+        background-image: url("../img/solo_on.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        list-style: none;
+        height: 40%;
+        width: 50%;
+        cursor: pointer;
+        float: left;
+        transition: 0.3s;
+    }
+        #mode ul li:nth-child(3) {
+            background-image: url("../img/with_on.png");
+        }
+        #mode ul li:nth-child(1) {
+            background-image: url("../img/halloffame_off.png");
+            background-size: initial;
+            width: 100%;
+            height: 60%;
+        }
+        #mode ul li:hover:nth-child(1) {
+           background-image: url("../img/halloffame_on.png");
+        }
+        #mode ul li:hover:nth-child(2) {
+           background-image: url("../img/solo_off.png");
+        }
+        #mode ul li:hover:nth-child(3) {
+            background-image: url("../img/with_off.png");
+        }
+
+#start {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 1;
+}
+#start.hide {
+    display:none;
+}
+    #start section {
+        width: 300px;
+        height: 150px;
+    }
+    #start section > * {
+        float:left;
+    }
+    #start #name {
+        display:none;
+    }
+    .ai #start section #name {
+        display:inline-block;
+        width:100%;
+        height:30%;
+        padding:1em;
+        margin-bottom:5%;
+        background-color: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255,255,255,0.4);
+        color: #ddd;
+        text-align:center;
+        transition:0.3s;
+    }
+    .ai #start section #name:focus {
+        outline:0;
+        border-color:#bbb;
+    }
+    #start .turn {
+        height: 70%;
+        width: 50%;
+        margin-left: 0;
+        background-color:rgba(0, 0, 0, 0);
+        transition:0.5s;
+        border: 0;
+        font-size:2em;
+    }
+    #start .turn:nth-child(3) {
+        border-right:1px solid rgba(255, 255, 255, 0.5);
+        background-color:rgba(255, 255, 255, 0.3);
+        color:#111;
+    }
+    #start .turn:nth-child(3):hover {
+        border-right:1em solid #ddd;
+    }
+    #start .turn:nth-child(2) {
+        border-left:1px solid rgba(255, 255, 255, 0.5);
+        color: #bbb;
+    }
+    #start .turn:nth-child(2):hover {
+        border-left:1em solid #ddd;
+    }
+
+#board {
+    width: 80%;
+    background-image: url("../img/board.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition:0.3s;
+}
+.ai #board {
+    background-image: url("../img/board15.png");
+}
+    #board > div {
+        display: inline-block;
+        width: 4.4%;
+        height: 4.4%;
+        float: left;
+        border-radius: 100%;
+        margin: 0.3% 0.3%;
+        transition: 0.1s;
+        background-position: center;
+    }
+    .ai #board > div {
+        width: 5.6%;
+        height: 5.6%;
+        margin: 0.5333%;
+    }
+    .ai #board > div:nth-child(n + 226) {
+        display:none;
+    }
+    .b #board div:hover {
+        border: 2px solid rgba(255, 255, 255, 0.4);
+    }
+    .w #board div:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+    #frame.win #board div:hover {
+        background-color: rgba(255, 255, 255, 0.0);
+        border: 0;
+    }
+    #board .b  {
+        border: 2px solid #ddd !important;
+        background-color: rgba(0, 0, 0, 0) !important;
+    }
+    #board .w  {
+        background-color: rgba(255, 255, 255, 0.9) !important;
+    }
+    #frame:not(.win) #board .last {
+        background-image: url("../img/last.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 0.8em;
+    }
+    #frame.win #board div:not(.win) {
+        opacity: 0.2;
+    }
+    #frame.win #board div.win {
+        box-shadow: 0 0 5px 1px #df4239;
+    }

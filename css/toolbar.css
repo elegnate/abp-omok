@@ -1,0 +1,120 @@
+.toolbar-hide #toolbar {
+    display:none;
+}
+.toolbar-hide #show {
+    background-image: url("../img/show_off.png");
+}
+.toolbar-hide #show:hover {
+    background-image: url("../img/show_on.png");
+}
+.toolbar-hide #board {
+    margin-left:10%;
+}
+
+#show {
+    background-image:url("../img/hide_off.png");
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 1%;
+    margin-left: 0.5%;
+    height: 100%;
+    float: left;
+    cursor: pointer;
+}
+#show:hover {
+    background-image:url("../img/hide_on.png");
+}
+
+#toolbar {
+    width: 18.5%;
+    box-sizing:border-box;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+    #toolbar > div {
+        width:100%;
+        padding: 7% 7% 0 0;
+    }
+    #toolbar > #turn {
+        height: 5%;
+    }
+        #turn input[type=button] {
+            width: 50%;
+            height: 100%;
+            float: left;
+            border-width: 1em;
+            border-top: 0;
+            border-bottom: 0;
+            transition: 0.1s;
+        }
+        #turn input[type=button]:first-child {
+            background-color: #333;
+            border-color: #ddd;
+            border-left: 0;
+        }
+        #turn input[type=button]:last-child {
+            background-color: #ddd;
+            border-color: #333;
+            border-right: 0;
+        }
+        .b #turn input[type=button]:first-child {
+            border-color: #333;
+        }
+        .w #turn input[type=button]:last-child {
+            border-color: #ddd;
+        }
+    #log {
+        height: 75%;
+    }
+        #log section {
+            overflow: hidden;
+        }
+            #log textarea[disabled] {
+                width: 110%;
+                height:100%;
+                background-color: rgba(0, 0, 0, 0);
+                color: #ddd;
+                border-bottom: 2px solid #666;
+                border-top: 2px solid #666;
+                line-height: 1.5em;
+                padding: 0.5em 2em 0.5em 0.5em;
+                overflow-y: scroll;
+            }
+    #proceed {
+        height: 20%;
+    }
+    #toolbar #proceed {
+        padding: 7% 7% 7% 0;
+    }
+        #proceed > input[type=button] {
+            margin: 0 0 4%;
+            width: 100%;
+            height: 30%;
+            transition: 0.3s;
+        }
+        #proceed > input[type=button]:hover {
+            background-color: rgba(0, 0, 0, 0);
+        }
+        #undo {
+            background-color: #525252;
+            border-color: #525252;
+            color: #ddd;
+        }
+        #undo:hover {
+            color:#525252;
+        }
+        #dropout {
+            background-color: #df4239;
+            border-color: #df4239;
+            color: #ddd;
+        }
+        #dropout:hover {
+            color: #df4239;
+        }
+        #exit {
+            background-color:rgba(0, 0, 0, 0);
+        }
+        #exit:hover {
+            background-color: #888 !important;
+            color:#ddd;
+        }

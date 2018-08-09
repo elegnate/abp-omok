@@ -1,0 +1,166 @@
+.ai #frame, .\32 p #frame {
+    max-width: 1200px;
+    max-height: 960px;
+    width: 100vw;
+    height: 80vw;
+    -webkit-animation: ani-open 1s;
+    animation: ani-open 1s;
+}
+
+@media screen and (max-width: 979px) {
+    .ai #frame, .\32 p #frame {
+    	width: 98vw;
+		height: 122.5vw;
+        max-width: 736px;
+        max-height: 920px;
+    }
+        #frame section {
+            float: none;
+        }
+    #rank footer h2 {
+    	padding-top: 2em;
+ 	}
+    #rank footer h2 div {
+		font-size:1em;
+		float:none;
+		width:100%;
+		height: 1em;
+	}
+	#show {
+		width:100%;
+		height: 1%;
+		margin: 1% 0 0;
+		background-image:url("../img/mb_hide_off.png");
+	}
+	#show:hover {
+		background-image:url("../img/mb_hide_on.png");
+	}
+	.toolbar-hide #show {
+		background-image: url("../img/mb_show_off.png");
+	}
+	.toolbar-hide #show:hover {
+		background-image:url("../img/mb_show_on.png");
+	}
+    #board {
+        width:100%;
+        height:80%;
+    }
+    .toolbar-hide #board {
+		margin:10% 0 0 0;
+	}
+    #toolbar {
+        width:100%;
+        height: 18%;
+        border-left: 0;
+    }
+        #toolbar > div {
+            height:100%;
+            float:left;
+            padding: 0 0 2% 2%;
+        }
+        #toolbar #turn {
+            width: 5%;
+            height: 100%;
+        }
+        	#toolbar #turn input[type=button] {
+				height:50%;
+				width:100%;
+				border-right: 0;
+				border-left: 0;
+			}
+			#turn input[type=button]:first-child {
+				border-bottom: 1em solid #ddd;
+			}
+			#turn input[type=button]:last-child {
+				border-top: 1em solid #333;
+			}
+			
+        #toolbar #log {
+            width: 70%;
+        }
+        #toolbar #proceed {
+            width: 25%;
+            padding: 0 2% 2% 2%;
+        }
+        .ai #toolbar #log {
+        	width: 70%;
+        	height:100%;
+        }
+}
+
+@media screen and (max-width: 735px) {
+    * {
+        font-size: 0.8rem;
+    }
+    #start * {
+    	font-size:1rem;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    * {
+        font-size: 0.7rem;
+    }
+    #rank section div header {
+    	font-size:8em;
+    }
+    #rank .content div h1 {
+    	line-height:1.9em;
+    	font-size:1.3em;
+    }
+    @-webkit-keyframes ani-close {
+        0% { width: 100%; height: 60%; }
+        45% { width: 100%; height: 2px; }
+        70% { width: 0px; height: 2px; }
+        100% { width: 0px; height: 2px; }
+    }
+    @keyframes ani-close {
+        0% { width: 100%; height: 60%; }
+        45% { width: 100%; height: 2px; }
+        70% { width: 0px; height: 2px; }
+        100% { width: 0px; height: 2px; }
+    }
+}
+
+@media screen and (max-width: 424px) {
+    * {
+        font-size: 0.7rem;
+    }
+    #rank {
+		width:95%;   
+	}
+    .ai #frame, .\32 p #frame {
+        width: 360px;
+        height: 450px;
+    }
+    .\32 p #board > div {
+        width: 16px;
+        height: 16px;
+        margin: 1px;
+    }
+    .ai #board > div {
+        width: 22px;
+        height: 22px;
+        margin: 1px;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    * {
+        font-size: 0.6rem;
+    }
+    .ai #frame, .\32 p #frame {
+        width: 300px;
+        height: 375px;
+    }
+    .\32 p #board > div {
+        width: 14px;
+        height: 14px;
+        margin: 0.5px;
+    }
+    .ai #board > div {
+        width: 18px;
+        height: 18px;
+        margin: 1px;
+    }
+}

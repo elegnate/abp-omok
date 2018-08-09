@@ -1,0 +1,141 @@
+#rank.hide {
+    display:none;
+}
+#rank {
+    width:80%;   
+}
+#rank > header {
+    position:relative;
+    height: 22%;
+    width:100%;
+    background-image: url("../img/Laurel.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+    #record {
+        position:absolute;
+        bottom:0;
+        margin: 0.5em;
+        color: #999;
+        font-size:2em;
+    }
+        #record > span {
+            font-size: 1em;
+        }
+        #record > span:nth-child(2) {
+            color: #f7c633;
+        }
+        #record > span:nth-child(3) {
+            font-size:0.5em;
+            color: #555;
+        }
+    header > input[type=button] {
+        position:absolute;
+        height: 2em;
+        width:5em;
+        right:0;
+        bottom:0;
+        border:0;
+        margin-bottom:0.5em;
+        background-color:rgba(0, 0, 0, 0);
+        color: #444;
+        transition: 0.3s;
+    }
+    header > input[type=button]:hover {
+        background-color:rgba(0, 0, 0, 0);
+        color: #f7c633;
+    }
+#rank .content {
+    height: 78%;
+    width:100%;
+    overflow:hidden;
+    border-top: 0.5em solid #f7c633;
+}
+    #rank .content > section {
+        width:105%;
+        overflow-y:scroll;
+        counter-reset:rank;
+    }
+    #rank section > div {
+        height:7em;
+        width:100%;
+        background-color: rgba(64, 64, 64, 0.8);
+        margin:2em 0;
+        cursor:pointer;
+        transition: 0.3s;
+        counter-increment:rank;
+    }
+    #rank section > div:nth-child(1) {
+        border-left:0.5em solid #f7c633;
+    }
+    #rank section > div:nth-child(2) {
+        border-left:0.5em solid #aaa;
+    }
+    #rank section > div:nth-child(3) {
+        border-left: 0.5em solid #93604f;
+    }
+        content > * {
+            display:inline-block;
+        }
+        content > h1 {
+            font-size: 1em;
+            padding-right:0.5em;
+            font-weight: normal;
+        }
+    #rank section > div:hover {
+        background-color: rgba(44, 44, 44, 0.8);
+    }
+        #rank section div:hover header {
+            color: #ddd;
+        }
+        #rank section div:hover content {
+            color: #ddd;
+        }
+    #rank section div > * {
+        float:left;
+    }
+    #rank section div header {
+        width: 20%;
+        height:100%;
+        font-size: 6.5em;
+        color: #333;
+        text-align: center;
+    }
+        #rank section div header:before {
+            content:counter(rank);
+        }
+        #rank section div:nth-child(1) header {
+            color: #f7c633;
+        }
+        #rank section div:nth-child(2) header {
+            color: #aaa;
+        }
+        #rank section div:nth-child(3) header {
+            color: #93604f;
+        }
+    #rank section div content {
+        width: 55%;
+        height:100%;
+        color:#888;
+        font-size: 3.5em;
+        line-height: 2.1em;
+        text-align: center;
+    }
+    #rank section div footer {
+        width:20%;
+        height:100%;
+    }
+        footer h2 {
+            color:#666;
+            padding-top: 2.5em;
+        }
+            footer h2 div {
+                display:inline-block;
+                float:left;
+                height:2em;
+            }
+            footer h2 div:nth-child(1) {
+                margin-right:0.5em;
+                font-size:2em;
+            }
