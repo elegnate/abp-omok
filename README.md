@@ -1,2 +1,2 @@
 # abp-omok
-AI omok using ABP algorithm.
+AB 가지치기 알고리즘을 적용한 웹 오목 게임입니다.
